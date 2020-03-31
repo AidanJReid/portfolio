@@ -1,13 +1,14 @@
 document.getElementById("profile").addEventListener("submit", function(e) {
-    const name = document.getElementById('name'),
-    age = document.getElementById('age'),
-    height = document.getElementById('height'),
-    fear = document.getElementById('fear'),
-    message = document.getElementById('message');
+    this.name = document.getElementById('name'),
+    this.age = document.getElementById('age'),
+    this.height = document.getElementById('height'),
+    this.fear = document.getElementById('fear'),
+    this.message = document.getElementById('message');
 
     document.getElementById('profile').style.display = 'none';
+    document.getElementById('header').style.display = 'none';
     document.getElementById('begin').style.display = 'block';
-    document.getElementById('header').innerHTML = `Embark on a journey young ${name}`;
+    document.getElementById('begin').innerHTML = `Embark on a journey young ${name}`;
 
     e.preventDefault();
 });
