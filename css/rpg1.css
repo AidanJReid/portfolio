@@ -3,7 +3,7 @@
 *, *::before, *::after {
     box-sizing: border-box;
     font-family: 'Poor Story', cursive;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 body {
