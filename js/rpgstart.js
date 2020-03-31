@@ -103,7 +103,7 @@ const textNodes = [
     },
     {
         id: 4,
-        text: "You get out of bed, stretch, yawn and quickly get dressed. Noticing that it is raining outside, you use the severed head to reach into the top shelf of your wardrobe. You find exactly what you need for the weather.",
+        text: "You get out of bed, stretch, yawn and quickly get dressed. Noticing that it is raining outside, you step on the severed head to reach the top shelf of your wardrobe. You find exactly what you need for the weather.",
         options: [
             {
                 text: "A vinyl Lionel Richie album",
