@@ -1,0 +1,34 @@
+body, html {
+    
+  padding: 0;
+  margin:  0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+    
+}
+
+#ChannelSplit {
+    padding-top: 30vh;
+}
+
+#container {
+    text-align: center;
+}
+
+/* Button Styling w pulse */
+
+@keyframes shadow-pulse
+{
+     0% {
+          box-shadow: 0 0 0 0px rgba(4, 170, 247, 0.2);
+     }
+     100% {
+          box-shadow: 0 0 0 25px rgba(0, 0, 0, 0);
+     }
+}
+
+.btn
+{
+     animation: shadow-pulse 1s infinite;
+}
