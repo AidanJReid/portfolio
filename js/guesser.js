@@ -35,7 +35,7 @@ guessBtn.addEventListener("click", function(){
     // Check if it's winning guess
     if(guess === winningNum){
         // Game over - Won
-        gameOver(true, `${winningNum} is right! Bored much?`);
+        gameOver(true, `${winningNum} is right! Were you watching me in Coppers?!`);
 
     } else if (guessesLeft === 0){
         // Game over - Lost
@@ -47,7 +47,7 @@ guessBtn.addEventListener("click", function(){
             // Change border color
             guessInput.style.borderColor = 'red';
             // Tell user its the wrong number
-            setMessage(`Nope. ${guess} isn't right. ${guessesLeft} guesses left...`, 'red');
+            setMessage(`Nope. That's piss poor. ${guess} isn't right. ${guessesLeft} guesses left...`, 'red');
             // Clear input
             guessInput.value = ''
         }
