@@ -3,28 +3,28 @@ const github = new Github;
 // Init UI
 const ui = new UI;
 
-// Search Input
+// Search input
 const searchUser = document.getElementById('searchUser');
 
-// Search Input event listener
+// Search input event listener
 searchUser.addEventListener('keyup', (e) => {
   // Get input text
   const userText = e.target.value;
 
-  if(userText !== '') {
-    // Make HTTP call
-    Github.getUser(userText)
+  if(userText !== ''){
+   // Make http call
+   github.getUser(userText)
     .then(data => {
-        if(data.profile.message === 'Not found') {
-            // Show alert
+      if(data.profile.message === 'Not Found') {
+        // Show alert
 
-        } else {
-            // Show profile
-            ui.showProfile(data.profile);
-        }
+      } else {
+        // Show profile
+        ui.showProfile(data.profile);
+      }
     })
+  } else {
+    // Clear profile
+    
   }
-  else {
-      // Clear profile
-  }
-});
+}); 
