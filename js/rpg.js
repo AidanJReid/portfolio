@@ -1,6 +1,6 @@
 //channel split
 
-var text = new Blotter.Text("ROT", {
+var text = new Blotter.Text("WELCOME", {
             family: 'Montserrat',
             size: 150,
             fill: "#000",
