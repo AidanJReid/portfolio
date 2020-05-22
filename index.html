@@ -361,49 +361,59 @@
 	</section>
 
     <!-- Sales|Marketing Section -->
+    <div id="accordion">
         <section class="page-section bg-dark text-white mb-0" id="sm">
             <div class="container">
             <!-- SM Section Heading -->
                 <h2 class="page-section-heading text-center text-uppercase text-white">Marketing</h2>
-                <!-- Icon Divider -->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon">
-                        <i class="fas fa-star"></i>
+                <!-- Icon Divider and accordion-->
+                <a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
+                    <div class="divider-custom divider-light">
+                        <div class="divider-custom-line"></div>
+                        <div class="divider-custom-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <div class="divider-custom-line"></div>
                     </div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <div class="container">
-                    <p class="lead">I have worked in the tech sector for 14 years, including for a variety of startups and large corporates (Oracle, Salesforce, BMC Software, Vodafone, SAS, etc) in a variety of sales and marketing roles.</p>
-                    <p class="lead">A thorough deep-dive of my career can be found on my <a href="https://www.linkedin.com/in/aidanreid/" target="_blank">Linkedin</a> page. Some notable marketing highlights include:</p>
-                    <ul>
-                        <li>Finalist in the <strong>Irish Blog Awards</strong> in 2017 for <a href="http://aidanjreid.com">personal site</a>.</li>
-                        <li>Published five fiction novels, two of which were Amazon Bestsellers for their genre.</li>
-                        <li>Consulted and advised hundreds of SME's on their SEO, blogging, content marketing and social media strategy.</li>
-                        <li>Deep understanding of <em>Inbound Marketing</em> practices having worked for the industry leader <strong>Hubspot</strong>.</li>
-                        <li>Diploma in <strong>Digital Marketing</strong> with strong knowledge of many methodologies (SEO, SEM, PPC, etc).</li>
-                    </ul>
+                </a>
+                <div id="collapseOne" class="collapse" data-parent="#accordion">
+                    <div class="container">
+                        <p class="lead">I have worked in the tech sector for 14 years, including for a variety of startups and large corporates (Oracle, Salesforce, BMC Software, Vodafone, SAS, etc) in a variety of sales and marketing roles.</p>
+                        <p class="lead">A thorough deep-dive of my career can be found on my <a href="https://www.linkedin.com/in/aidanreid/" target="_blank">Linkedin</a> page. Some notable marketing highlights include:</p>
+                        <ul>
+                            <li>Finalist in the <strong>Irish Blog Awards</strong> in 2017 for <a href="http://aidanjreid.com">personal site</a>.</li>
+                            <li>Published five fiction novels, two of which were Amazon Bestsellers for their genre.</li>
+                            <li>Consulted and advised hundreds of SME's on their SEO, blogging, content marketing and social media strategy.</li>
+                            <li>Deep understanding of <em>Inbound Marketing</em> practices having worked for the industry leader <strong>Hubspot</strong>.</li>
+                            <li>Diploma in <strong>Digital Marketing</strong> with strong knowledge of many methodologies (SEO, SEM, PPC, etc).</li>
+                        </ul>
+                    </div>
                 </div>
             </div> 
         </section>
+    </div>
 
     <!-- Articles Section -->
 	<section class="page-section portfolio" id="articles">
+    <div id="accordion">
 		<div class="container">
 
 			<!-- Article Section Heading -->
 			<h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Article Portfolio</h2>
 
-			<!-- Icon Divider -->
-			<div class="divider-custom">
-				<div class="divider-custom-line"></div>
-				<div class="divider-custom-icon">
-					<i class="fas fa-star"></i>
-				</div>
-				<div class="divider-custom-line"></div>
-			</div>
+			<!-- Icon Divider and accordion-->
+            <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                        <i class="fas fa-plus-circle"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                </div>
+            </a>
 
             <!-- Paragraph intro -->
+            <div id="collapseTwo" class="collapse" data-parent="#accordion">
             <div class="container text-center">
                 <p class="lead">I have written across a spectrum of subjects, but am most passionate and specialize in technology, startups, sales development and marketing, tools for improving productivity and how to improve client engagement.</p>
                 <hr style="width: 25%;">
@@ -456,6 +466,8 @@
 
             </div>
             <hr>
+            </div>
+        </div>
         </div>
 	</section>
 
