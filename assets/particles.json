@@ -9,7 +9,7 @@
     "shape": {
       "type": "image",
       "image": {
-        "src": "img/giant.png"
+        "src": "../img/giant.png"
       }
       },
     "opacity": {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="../css/freelancer.min.css" rel="stylesheet">
+	<title>Particle Effects Using JSON</title>
+</head>
+
+<body style="margin:0;">
+    <div id="particles-js" style="background:dodgerblue;">
+	    <div id="login" style="background:white; opacity:0.9; padding:2em; border:2px solid gray; position:absolute;" class="col-6 offset-3 mt-3 text-center">
+			<form class="justify-content-center">
+            <h3 class="pb-3">Play Outside Form</h3>
+				<div class="form-group">
+					<input type="text" placeholder=" First Name" id="fname">
+				</div>
+                <div class="form-group">
+                    <input type="text" placeholder=" Last Name" id="lname">
+                </div>
+                <button type="button" class="btn btn-success">Not Working</button>
+                <br>
+            </form>
+		</div>
+	</div>
+
+
+	<!-- Contact form weird JS-->
+	<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	<script>
+		particlesJS.load('particles-js', '../assets/particles.json', function() {
+    console.log('particles.js loaded');
+    });
+	</script>
+</body>
+
+</html>
