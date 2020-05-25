@@ -12,7 +12,7 @@ const ItemCtrl = (function(){
     // Data structure / State
     const data = {
         items: [
-            {id: 0, name: "Guinness", units: 1},
+            {id: 0, name: "Guinness", units: 1.5},
             {id: 1, name: "Baby Guinness", units: 2},
             {id: 2, name: "Wine", units: 3}
         ],
@@ -46,7 +46,7 @@ const UICtrl = (function(){
 
             items.forEach(function(item){
                 html += `
-                <li class="collection-item" id="item-${item-id}">
+                <li class="collection-item" id="item-${item.id}">
                     <strong>${item.name}: </strong> <em>${item.units} units</em>
                     <a href="#" class="secondary-content">
                         <i class="edit-item fa fa-pencil"></i>
