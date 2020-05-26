@@ -25,6 +25,26 @@ const ItemCtrl = (function(){
         getItems: function(){
             return data.items;
         },
+        addItem: function(name, units){
+            let ID;
+            // Create ID
+            if(data.items.length > 0){
+                ID = data.items[data.items.length - 1].id + 1;
+            } else {
+                ID = 0;
+            }
+
+            // Units to number
+            units = parseInt(units);
+
+            // Create new item
+            newItem = new Item(id, name, units);
+
+            // Add to items array
+            data.items.push(newItem);
+
+            return newItem;
+        },
         logData: function(){
             return data;
         }
@@ -36,7 +56,10 @@ const ItemCtrl = (function(){
 // UI controller
 const UICtrl = (function(){
     const UISelectors = {
-        itemList: "#item-list"
+        itemList: "#item-list",
+        addBtn: ".add-btn",
+        itemNameInput: "#item-name",
+        itemUnitInput: "#item-units"
     }
     
     // Public methods
@@ -56,6 +79,30 @@ const UICtrl = (function(){
 
             // Insert list items
             document.querySelector(UISelectors.itemList).innerHTML = html;
+        },
+        getItemInput: function(){
+            return {
+                name: document.querySelector(UISelectors.itemNameInput.value),
+                units: document.querySelector(UISelectors.itemUnitsInput.value)                
+            }
+        },
+        addListItem: function(item){
+            // Create LI element
+            const li = document.createElement('li');
+            // Add class
+            li.className = 'collection-item';
+            // Add ID
+            li.id = `item-${item.id}`;
+            // Add HTML
+            li.innerHTML = ` <strong>${item.name}: </strong> <em>${item.units} units</em>
+                    <a href="#" class="secondary-content">
+                        <i class="edit-item fa fa-pencil"></i>
+                    </a>`;
+            // Insert item
+            document.querySelector(UISelectors.itemList).insertAdjacentElement('beforeend', li)
+        },
+        getSelectors: function(){
+            return UISelectors;
         }
     }
 
@@ -65,6 +112,30 @@ const UICtrl = (function(){
 
 // App controller
 const App = (function(ItemCtrl, UICtrl){
+    // Load event listeners
+    const loadEventListeners = function(){
+        // GET UI
+        const UISelectors = UICtrl.getSelectors();
+
+        // Add item event
+        document.querySelector(UISelectors.addBtn).addEventListener('click', itemAddSubmit);
+    }
+
+    // Add item submit
+    const itemAddSubmit = function(e){
+        // Get form input from UI controller
+        const input = UICtrl.getItemInput();
+
+        // Check for name and unit input
+        if(input.name !== "" && input.units !== "") {
+            // Add item
+            const newItem = ItemCtrl.addItem(input.name, input.units);
+            // Add item to UI list
+            UICtrl.addListItem(newItem);
+        }
+        
+        e.preventDefault();
+    }
 
     // Public methods 
     return {
@@ -74,6 +145,9 @@ const App = (function(ItemCtrl, UICtrl){
 
             // Populate list w/ items
             UICtrl.populateItemList(items);
+
+            // Load event listener
+            loadEventListeners();
         }
     }
     
