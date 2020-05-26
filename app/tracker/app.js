@@ -1,5 +1,65 @@
 // Storage controller
 
+const StorageCtrl = (function(){
+    // Public methods
+    return {
+        storeItem: function(item){
+            let items;
+            // Check if any items in local storage
+            if(localStorage.getItem('items') === null){
+                items = [];
+                // Push new items
+                items.push(item);
+                // Set local storage
+                localStorage.setItem('items', JSON.stringify(items));
+            } else {
+                // Get what's in local storage
+                items = JSON.parse(localStorage.getItem('items'));
+
+                // Push new items
+                items.push(item);
+
+                // Reset local storage
+                localStorage.setItem('items', JSON.stringify(items));
+            }
+        },
+        getItemsFromStorage: function(){
+            let items;
+            if(localStorage.getItem('items') === null){
+                items = [];
+            } else {
+                items = JSON.parse(localStorage.getItem('items'));
+            }
+            return items;
+        },
+        updateItemStorage: function(updatedItem){
+            let items = JSON.parse(localStorage.getItem('items'));
+
+            items.forEach(function(item, index){
+                if(updatedItem.id === item.id){
+                    items.splice(index, 1, updatedItem)
+                } else {
+
+                }
+            });
+            localStorage.setItem('items', JSON.stringify(items));
+        },
+        deleteItemFromStorage: function(id){
+        let items = JSON.parse(localStorage.getItem('items'));
+        
+        items.forEach(function(item, index){
+            if(id === item.id){
+            items.splice(index, 1);
+            }
+        });
+        localStorage.setItem('items', JSON.stringify(items));
+    },
+        clearItemsFromStorage: function(){
+        localStorage.removeItem('items');
+    }
+  }
+})();
+
 // Item contoller
 const ItemCtrl = (function(){
     // Item constructor
@@ -11,11 +71,7 @@ const ItemCtrl = (function(){
 
     // Data structure / State
     const data = {
-        items: [
-            // {id: 0, name: "Guinness", units: 1.5},
-            // {id: 1, name: "Baby Guinness", units: 2},
-            // {id: 2, name: "Wine", units: 3}
-        ],
+        items: StorageCtrl.getItemsFromStorage(),
         currentItem: null,
         totalUnits: 0
     }
@@ -70,6 +126,21 @@ const ItemCtrl = (function(){
             });
             return found;
         },
+        deleteItem: function(id){
+            // Get ID's
+            ids = data.items.map(function(item){
+                return item.id;
+            });
+
+            // Get index
+            const index = ids.indexOf(id);
+
+            // Remove item
+            data.items.splice(index, 1);
+        },
+        clearAllItems: function(){
+            data.items = [];
+        },
         setCurrentItem: function(item){
             data.currentItem = item;
         },
@@ -107,9 +178,10 @@ const UICtrl = (function(){
         updateBtn: ".update-btn",
         deleteBtn: ".delete-btn",
         backBtn: ".back-btn",
+        clearBtn: ".clear-btn",
         itemNameInput: "#item-name",
         itemUnitInput: "#item-units",
-        totalUnits: ".total-units"
+        totalUnits: ".total-units"  
     }
     
     // Public methods
@@ -170,6 +242,11 @@ const UICtrl = (function(){
                 }
             });
         },
+        deleteListItem: function(id){
+            const itemID = `#item-${id}`;
+            const item = document.querySelector(itemID);
+            item.remove();
+        },
         clearInput: function(){
             document.querySelector(UISelectors.itemNameInput).value = "";
             document.querySelector(UISelectors.itemUnitInput).value = "";
@@ -178,6 +255,16 @@ const UICtrl = (function(){
             document.querySelector(UISelectors.itemNameInput).value = ItemCtrl.getCurrentItem().name;
             document.querySelector(UISelectors.itemUnitInput).value = ItemCtrl.getCurrentItem().units;
             UICtrl.showEditState();
+        },
+        removeItems: function(){
+            let listItems = document.querySelectorAll(UISelectors.listItems);
+
+            // Turn node list into array
+            listItems = Array.from(listItems);
+
+            listItems.forEach(function(item){
+                item.remove();
+            });
         },
         hideList: function(){
             document.querySelector(UISelectors.itemList).style.display = 'none';
@@ -208,7 +295,7 @@ const UICtrl = (function(){
 
 
 // App controller
-const App = (function(ItemCtrl, UICtrl){
+const App = (function(ItemCtrl, StorageCtrl, UICtrl){
     // Load event listeners
     const loadEventListeners = function(){
         // GET UI
@@ -231,6 +318,15 @@ const App = (function(ItemCtrl, UICtrl){
         // Update items
         document.querySelector(UISelectors.updateBtn).addEventListener('click', itemUpdateSubmit);
 
+        // Delete items
+        document.querySelector(UISelectors.deleteBtn).addEventListener('click', itemDeleteSubmit);
+
+        // Back button event
+        document.querySelector(UISelectors.backBtn).addEventListener('click', UICtrl.clearEditState);
+
+        // Clear button event
+        document.querySelector(UISelectors.clearBtn).addEventListener('click', clearAllItemsClick);
+
     }
 
     // Add item submit
@@ -248,6 +344,10 @@ const App = (function(ItemCtrl, UICtrl){
             const totalUnits = ItemCtrl.getTotalUnits();
             // Add total units to UI
             UICtrl.showTotalUnits(totalUnits);
+
+            // Store in local storage
+            StorageCtrl.storeItem(newItem);
+
             // Clear fields
             UICtrl.clearInput();
         }
@@ -298,7 +398,55 @@ const App = (function(ItemCtrl, UICtrl){
         // Add total units to UI
         UICtrl.showTotalUnits(totalUnits);
 
+        // Update local storage
+        StorageCtrl.updateItemStorage(updatedItem);
+
         UICtrl.clearEditState();
+    }
+
+    // Delete Button Event
+    const itemDeleteSubmit = function(e){
+        // Get current item
+        const currentItem = ItemCtrl.getCurrentItem();
+
+        // Delete from data structure
+        ItemCtrl.deleteItem(currentItem.id);
+
+        // Delete from UI
+        UICtrl.deleteListItem(currentItem.id);
+
+        // Get total units
+        const totalUnits = ItemCtrl.getTotalUnits();
+        // Add total units to UI
+        UICtrl.showTotalUnits(totalUnits);
+
+        // Delete from local storage
+        StorageCtrl.deleteItemFromStorage(currentItem.id);
+
+        UICtrl.clearEditState();
+
+        e.preventDefault();
+    };
+
+    // Clear items
+    const clearAllItemsClick = function(){
+        // Delete all items from data structure
+        ItemCtrl.clearAllItems();
+
+        // Get total units
+        const totalUnits = ItemCtrl.getTotalUnits();
+
+        // Add total units to UI
+        UICtrl.showTotalUnits(totalUnits);
+
+        // Remove from UI
+        UICtrl.removeItems();
+
+        // Clear from Local Storage
+        StorageCtrl.clearItemsFromStorage();
+
+        // Hide list
+        UICtrl.hideList();
     }
 
     // Public methods 
@@ -328,7 +476,7 @@ const App = (function(ItemCtrl, UICtrl){
         }
     }
     
-})(ItemCtrl, UICtrl);
+})(ItemCtrl, StorageCtrl, UICtrl);
 
 
 // Initialize App

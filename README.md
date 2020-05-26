@@ -5,11 +5,11 @@ This is my professional site showcasing various projects in web development and 
 ## List of projects
 
 ### PORTFOLIO
-- *Author Website*. Milestone Project #1 - Front-End Project for the Code Institute. Technology used: HTML, CSS, Bootstrap, Canva and Javascript.
-- *UFO Resource Page*. Milestone Project #2 - Interactive Front-End Project for the Code Institute.Technology used: HTML, CSS, Javascript, Crossfilter, D3.js, DC.js and jQuery.
-- *Forex Comics*. Milestone Project #3 - Data-Centric Development Full-Stack Project for the Code Institute. Technology used: HTML, CSS, Materialize, Javascript, jQuery, Python, Flask, Jinja and MongoDB.
-- *Lavender Blue*. Milestone Project #4 - Full-Stack Framework Project for the Code Institute. Technology used: HTML, CSS, Python, Amazon S3, Gunicorn, Pillow, Django, Heroku, PostgresQL, Travis CI and jQuery.
-- *Applications* (all using Vanilla Javascript without additonal frameworks)
+- *AUTHOR WEBSITE*. Milestone Project #1 - Front-End Project for the Code Institute. Technology used: HTML, CSS, Bootstrap, Canva and Javascript.
+- *UFO RESOURCE PAGE*. Milestone Project #2 - Interactive Front-End Project for the Code Institute.Technology used: HTML, CSS, Javascript, Crossfilter, D3.js, DC.js and jQuery.
+- *FOREX COMICS*. Milestone Project #3 - Data-Centric Development Full-Stack Project for the Code Institute. Technology used: HTML, CSS, Materialize, Javascript, jQuery, Python, Flask, Jinja and MongoDB.
+- *LAVENDER BLUE*. Milestone Project #4 - Full-Stack Framework Project for the Code Institute. Technology used: HTML, CSS, Python, Amazon S3, Gunicorn, Pillow, Django, Heroku, PostgresQL, Travis CI and jQuery.
+- *APPLICATIONS* (using Vanilla Javascript w/o additonal frameworks)
     - Inflation Calculator
     - Pint Guesser
     - Task Manager
@@ -19,8 +19,10 @@ This is my professional site showcasing various projects in web development and 
     - Trump Quotes (Using API)
     - Weather App (Using API)
     - Dating App (using ES2015)
-- *Django Blog Site*. Technology used: HTML, CSS, Python, Django, Pillow, Whitenoise + Gunicorn.
-- *Rot World*
+    - Booze Tracker (using ES6)
+    - Particle Effects (using Particles.js and JSON)
+- *DJANGO BLOG*. Technology used: HTML, CSS, Python, Django, Pillow, Whitenoise + Gunicorn.
+- *ROT WORLD*
     - Origin of the Feces
         - Tooth Fairy's Resume
         - Worse. Taxi. Ever
