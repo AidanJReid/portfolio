@@ -10,7 +10,7 @@ This is my professional site showcasing various projects in web development and 
 - *FOREX COMICS*. Milestone Project #3 - Data-Centric Development Full-Stack Project for the Code Institute. Technology used: HTML, CSS, Materialize, Javascript, jQuery, Python, Flask, Jinja and MongoDB.
 - *LAVENDER BLUE*. Milestone Project #4 - Full-Stack Framework Project for the Code Institute. Technology used: HTML, CSS, Python, Amazon S3, Gunicorn, Pillow, Django, Heroku, PostgresQL, Travis CI and jQuery.
 - *APPLICATIONS* (using Vanilla Javascript w/o additonal frameworks)
-    - Inflation Calculator
+    - Loan Calculator
     - Pint Guesser
     - Task Manager
     - Book Library
