@@ -58,17 +58,17 @@
 	</nav>
 
 	<!-- Masthead -->
-	<header class="masthead bg-info text-white text-center">
+	<header class="masthead text-center text-white bg-info">
 		<div class="container d-flex align-items-center flex-column">
-
+            <div id="particles-js" class="img-responsive"></div>
 			<!-- Masthead Avatar Image -->
-			<img class="masthead-avatar mb-5" src="img/avataaars.png" alt="">
+			<img class="masthead-avatar mb-5 prof-text" src="img/avataaars.png" alt="">
 
 			<!-- Masthead Heading -->
-			<h1 class="masthead-heading text-uppercase mb-0">Aidan Reid</h1>
+			<h1 class="masthead-heading text-uppercase mb-0 prof-text">Aidan Reid</h1>
 
 			<!-- Icon Divider -->
-			<div class="divider-custom divider-light">
+			<div class="divider-custom divider-light prof-text">
 				<div class="divider-custom-line"></div>
 				<div class="divider-custom-icon">
 					<i class="fas fa-star"></i>
@@ -77,7 +77,7 @@
 			</div>
 
 			<!-- Masthead Subheading -->
-			<p class="masthead-subheading font-weight-light mb-0">Full Stack Software Developer | Content Marketing Writer </p>
+			<p class="masthead-subheading font-weight-light mb-0 prof-text">Software Developer | Content Marketer </p>
             </br >
             <p class="masthead-subheading text-center mb-0">
                 <a class="btn btn-outline-light btn-small btn-social mx-1" href="https://github.com/AidanJReid" target="_blank">
@@ -1040,6 +1040,13 @@
     $(this).find('i').toggleClass('fa-plus-circle fa-minus-circle')
     });
     </script>
+    <!-- particles -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+	<script>
+		particlesJS.load('particles-js', 'assets/particles2.json', function() {
+    console.log('particles.js loaded');
+    });
+	</script>
 
 </body>
 
