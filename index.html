@@ -47,7 +47,7 @@
                     <li class="nav-item mx-0 mx-lg-1">
 						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="https://blog.aidanreid.com/" target="_blank">Blog</a>
 					</li>
-                    <li class="nav-item mx-0 mx-lg-1">
+                    <li class="nav-item mx-0 mx-lg-1 mking">
 						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#sm">Marketing</a>
 					</li>
                     <li class="nav-item mx-0 mx-lg-1">
@@ -95,7 +95,7 @@
             <p class="masthead-subheading text-center mb-0">
                 <small>- Profile Bias -</small>
                 <br>
-                <input type="checkbox" checked data-toggle="toggle" data-on="Coding" data-off="Marketing" data-onstyle="primary" data-offstyle="danger">
+                <input type="checkbox" checked data-toggle="toggle" data-on="Coding" data-off="Marketing" data-onstyle="primary" data-offstyle="danger" id="bias">
             </p>
 		</div>
 	</header>
@@ -526,7 +526,7 @@
     </section>
 
     <!-- Sales|Marketing Section -->
-    <section class="page-section bg-dark text-white mb-0" id="sm">
+    <section class="page-section bg-dark text-white mb-0 mking" id="sm">
         <div id="accordion1" class="accy">
             <div class="container">
             <!-- SM Section Heading -->
@@ -559,7 +559,7 @@
     </section>
 
     <!-- Articles Section -->
-	<section class="page-section portfolio" id="articles">
+	<section class="page-section portfolio mking" id="articles">
         <div id="accordion2" class="accy">
             <div class="container">
 
@@ -1215,6 +1215,13 @@
     console.log('particles.js loaded');
     });
 	</script>
+    <script>
+    $(function() {
+    $('#bias').toggleClass(function() {
+      $('.mking').css({'display', 'hidden'});
+    });
+    });
+    </script>
 
 </body>
 
