@@ -24,6 +24,10 @@
     background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  */
 }
 
+.checked {
+    color: orange;
+}
+
 /* Source text testimonials */
 .test-name {
     text-transform: uppercase;
