@@ -30,7 +30,7 @@
 }
 
 .carousel-control-next, .carousel-control-prev {
-    bottom: 25%;
+    bottom: 25% !important;
 }
 
 /* Source text testimonials */
