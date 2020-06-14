@@ -74,6 +74,10 @@ body  {
     background: slategray !important;
 }
 
+.course {
+    text-emphasis: bolder;
+}
+
 
 /* Portfolio Ribbon */
 .ribbon {
