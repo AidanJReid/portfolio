@@ -93,7 +93,7 @@
             </p>
             <br>
             <p class="masthead-subheading text-center mb-0">
-                <small>- Profile Bias -</small>
+                <small><em>- Profile Bias -</em></small>
                 <br>
                 <input type="checkbox" checked data-toggle="toggle" data-on="Coding" data-off="Marketing" data-onstyle="secondary" data-offstyle="warning" id="bias">
             </p>
@@ -408,7 +408,7 @@
 	</section>
 
     <!-- Education Section -->
-    <section class="page-section bg-secondary text-white" id="education">
+    <section class="page-section text-white" id="education">
 
         <!-- Section Heading -->
 			<h2 class="page-section-heading text-center text-uppercase text-white">Education</h2>
@@ -1219,7 +1219,8 @@
     <script>
     $(function() {
     $('#bias').change(function() {
-      $('.mking').toggle('mking');
+      $('.mking').toggle();
+      $('.cod').toggle();
     });
     });
     </script>

@@ -1,4 +1,8 @@
 /* hiding marketing and coding content */
+.cod {
+    display: block;
+}
+
 .mking {
     display:none;
 }
@@ -40,6 +44,10 @@
 }
 
 /* Education site */
+
+#education {
+    background: slategray !important;
+}
 
 
 /* Portfolio Ribbon */
