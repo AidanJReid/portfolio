@@ -29,6 +29,11 @@
     padding: 0px 5px;
 }
 
+.carousel-control-next, .carousel-control-prev {
+    top: 25%;
+    bottom: 0;
+}
+
 /* Source text testimonials */
 .test-name {
     text-transform: uppercase;
