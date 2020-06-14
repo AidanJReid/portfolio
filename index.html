@@ -38,7 +38,7 @@
                     <li class="nav-item mx-0 mx-lg-1">
 						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">About</a>
 					</li>
-					<li class="nav-item mx-0 mx-lg-1">
+					<li class="nav-item mx-0 mx-lg-1 cod">
 						<a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Portfolio</a>
 					</li>
                     <li class="nav-item mx-0 mx-lg-1">
@@ -95,8 +95,9 @@
             <p class="masthead-subheading text-center mb-0">
                 <small>- Profile Bias -</small>
                 <br>
-                <input type="checkbox" checked data-toggle="toggle" data-on="Coding" data-off="Marketing" data-onstyle="primary" data-offstyle="danger" id="bias">
+                <input type="checkbox" checked data-toggle="toggle" data-on="Coding" data-off="Marketing" data-onstyle="secondary" data-offstyle="warning" id="bias">
             </p>
+            <br>
 		</div>
 	</header>
 
@@ -138,7 +139,7 @@
 	</section>
 
     <!-- Portfolio Section -->
-	<section class="page-section portfolio" id="portfolio">
+	<section class="page-section portfolio cod" id="portfolio">
 		<div class="container">
 
 			<!-- Portfolio Section Heading -->
@@ -297,7 +298,7 @@
 	</section>
 
 	<!-- Skills Section -->
-	<section class="page-section bg-primary text-white mb-0" id="skills">
+	<section class="page-section bg-primary text-white mb-0 cod" id="skills">
 
 			<!-- About Section Heading -->
 			<h2 class="page-section-heading text-center text-uppercase text-white">Tech Skills</h2>
@@ -532,7 +533,7 @@
             <!-- SM Section Heading -->
                 <h2 class="page-section-heading text-center text-uppercase text-white">Marketing</h2>
                 <!-- Icon Divider and accordion-->
-                <a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
+                <a class="collapsed card-link" data-toggle="collapse show" aria-expanded="false" href="#collapseOne">
                     <div class="divider-custom divider-light">
                         <div class="divider-custom-line"></div>
                         <div class="divider-custom-icon">
@@ -541,7 +542,7 @@
                         <div class="divider-custom-line"></div>
                     </div>
                 </a>
-                <div id="collapseOne" class="collapse" data-parent="#accordion1">
+                <div id="collapseOne" class="collapse show" data-parent="#accordion1">
                     <div class="container">
                         <p class="lead">I have worked in the tech sector for 14 years, including for a variety of startups and large corporates (Oracle, Salesforce, BMC Software, Vodafone, SAS, etc) in a variety of sales and marketing roles.</p>
                         <p class="lead">A thorough deep-dive of my career can be found on my <a href="https://www.linkedin.com/in/aidanreid/" target="_blank">Linkedin</a> page. Some notable marketing highlights include:</p>
@@ -567,7 +568,7 @@
                 <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Article Portfolio</h2>
 
                 <!-- Icon Divider and accordion-->
-                <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                <a class="collapsed card-link" data-toggle="collapse show" href="#collapseTwo" aria-expanded="true">
                     <div class="divider-custom">
                         <div class="divider-custom-line"></div>
                         <div class="divider-custom-icon">
@@ -578,7 +579,7 @@
                 </a>
 
                 <!-- Paragraph intro -->
-                <div id="collapseTwo" class="collapse" data-parent="#accordion2">
+                <div id="collapseTwo" class="collapse show" data-parent="#accordion2">
                     <div class="container text-center">
                         <p class="lead">I have written across a spectrum of subjects, but am most passionate and specialize in technology, startups, sales development and marketing, tools for improving productivity and how to improve client engagement.</p>
                         <hr style="width: 25%;">
@@ -1217,8 +1218,8 @@
 	</script>
     <script>
     $(function() {
-    $('#bias').toggleClass(function() {
-      $('.mking').css({'display', 'hidden'});
+    $('#bias').change(function() {
+      $('.mking').toggleClass('mking');
     });
     });
     </script>
