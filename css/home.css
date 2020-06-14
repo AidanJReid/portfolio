@@ -8,7 +8,7 @@
 }
 
 .masthead {
-    padding-top: 100px;
+    padding-top: 120px;
     padding-bottom: 20px;
 }
 
@@ -28,6 +28,10 @@
 /* General styling */
 .page-section {
     overflow-x:hidden;
+}
+
+.page-section {
+    padding: 72px 0px;
 }
 
 /* Header background */
