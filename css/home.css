@@ -1,6 +1,6 @@
 /* hiding marketing and coding content */
 .cod {
-    display: block;
+    display: list-item;
 }
 
 .mking {
@@ -43,7 +43,7 @@
 }
 
 /* General styling */
-body  {
+body, html  {
     overflow-x:hidden;
 }
 
