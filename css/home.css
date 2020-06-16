@@ -142,3 +142,10 @@ body, html  {
     border-bottom: 3px solid transparent;
     border-top: 3px solid #41228e;
 }
+
+/* Media queries */
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  .pricing-item {
+    height: 540px;
+}
+}
