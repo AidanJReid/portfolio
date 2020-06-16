@@ -42,6 +42,12 @@
     color: gray;
 }
 
+/* pricing item */
+.pricing-item {
+    height: 450px;
+    border-top: 5px solid red;
+}
+
 /* General styling */
 body, html  {
     overflow-x:hidden;
