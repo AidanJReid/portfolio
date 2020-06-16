@@ -24,6 +24,10 @@
     background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  */
 }
 
+.rounded-circle {
+    height: 150px;
+}
+
 .checked {
     color: orange;
     padding: 0px 5px;
