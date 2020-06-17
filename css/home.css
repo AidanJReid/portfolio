@@ -52,6 +52,12 @@
     border-top: 5px solid red;
 }
 
+/* Pricing card */
+
+.price-card {
+    height: 250px;
+}
+
 /* General styling */
 body, html  {
     overflow-x:hidden;
@@ -146,6 +152,20 @@ body, html  {
 /* Media queries */
 @media screen and (max-width: 900px) and (min-width: 600px) {
   .pricing-item {
-    height: 540px;
+    height: 520px;
+}
+}
+
+/* Media queries */
+@media screen and (max-width: 767px) {
+  .price-card {
+    height: 400px;
+}
+}
+
+/* Media queries */
+@media screen and (max-width: 1023px) and (min-width: 768px){
+  .price-card {
+    height: 350px;
 }
 }
