@@ -16,3 +16,14 @@ $('.popover-dismiss').popover({
 $(function () {
   $('[data-toggle="popover"]').popover()
 })
+
+$(".flipper").click(function() {
+  var target = $( event.target );
+  if ( target.is("button") ) {
+    //follow that link
+    $(this).toggleClass("flip");
+  } else {
+    return true;
+  }
+  return false;
+});
