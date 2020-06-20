@@ -230,8 +230,17 @@ body, html  {
 }
 
 /* Media queries */
+@media screen and (max-width: 374px) {
+  .list-group-item {
+    font-size: 12px;
+}
+}
+
 @media screen and (max-width: 1023px) and (min-width: 768px){
   .price-card {
     height: 350px;
+}
+.list-group-item {
+    font-size: 12px;
 }
 }
