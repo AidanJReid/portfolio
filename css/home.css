@@ -180,7 +180,6 @@ body, html  {
 /* pricing item */
 .pricing-item {
     height: 480px;
-    border-top: 5px solid red;
 }
 
 /* Pricing card */
