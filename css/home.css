@@ -233,6 +233,13 @@ body, html  {
   .list-group-item {
     font-size: 12px;
 }
+.list-inline-item .fab {
+    font-size: 2em;
+}
+.list-inline-item img {
+    width: 2em;
+    height: 2em;
+}
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px){
