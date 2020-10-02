@@ -131,11 +131,11 @@ body, html  {
 
 /* hiding marketing and coding content */
 .cod {
-    display: list-item;
+    display: none;
 }
 
 .mking {
-    display:none;
+    display:list-item;
 }
 
 .masthead {
