@@ -250,3 +250,13 @@ body, html  {
     font-size: 12px;
 }
 }
+
+.superman {
+    color: red;
+    background: yellow;
+}
+
+.shorten {
+    width: 13%;
+    float:left;
+}
