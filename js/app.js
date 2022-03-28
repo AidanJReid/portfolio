@@ -58,31 +58,31 @@ const GET_USER_ARTICLES = `
     }
 `;
 
-gql(GET_USER_ARTICLES, { page: 0 })
-    .then(result => {
-        const articles = result.data.user.publication.posts;
-        let container = document.createElement('div');
+// gql(GET_USER_ARTICLES, { page: 0 })
+//     .then(result => {
+//         const articles = result.data.user.publication.posts;
+//         let container = document.createElement('div');
 
-        articles.forEach(article => {
-            let title = document.createElement('h2');
-            title.innerText = article.title;
+//         articles.forEach(article => {
+//             let title = document.createElement('h2');
+//             title.innerText = article.title;
 
-            let brief = document.createElement('p');
-            brief.innerText = article.brief;
+//             let brief = document.createElement('p');
+//             brief.innerText = article.brief;
 
-            let link = document.createElement('a');
-            link.innerText = 'Read more...';
-            link.href = `https://blog.aidanreid.com/${article.slug}`;
+//             let link = document.createElement('a');
+//             link.innerText = 'Read more...';
+//             link.href = `https://blog.aidanreid.com/${article.slug}`;
 
-            container.appendChild(title);
-            container.appendChild(brief);
-            container.appendChild(link);
-        })
+//             container.appendChild(title);
+//             container.appendChild(brief);
+//             container.appendChild(link);
+//         })
 
-        document.querySelector('.app').appendChild(container);
-});
+//         document.querySelector('.app').appendChild(container);
+// });
 
-document.getElementById('articles').parentNode.innerHTML = `
-<div class="app">
-    <h1 class="app-heading text-center">Latest Blog Posts</h1>
-</div>`;
+// document.getElementById('articles').parentNode.innerHTML = `
+// <div class="app">
+//     <h1 class="app-heading text-center">Latest Blog Posts</h1>
+// </div>`;
