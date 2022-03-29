@@ -1,9 +1,9 @@
-$(function() {
-    $('#bias').change(function() {
-      $('.mking').toggle();
-      $('.cod').toggle();
-    });
-    });
+// $(function() {
+//     $('#bias').change(function() {
+//       $('.mking').toggle();
+//       $('.cod').toggle();
+//     });
+//     });
 
 // $(function() {
 //     $('.accy').collapse('toggle');
