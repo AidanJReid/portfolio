@@ -175,6 +175,7 @@ body, html  {
 
 .testimonial {
     color: gray;
+    font-size: 0.9em;
 }
 
 /* Carousel indicators styling */
